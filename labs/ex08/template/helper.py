@@ -3,9 +3,7 @@
 import os
 import shutil
 import numpy as np
-from scipy import misc
 from matplotlib.pyplot import imread
-
 
 def load_data():
     """Load data and convert it to the metrics system."""
@@ -37,18 +35,12 @@ def load_image(path):
 
 def build_distance_matrix(data, mu):
     """build a distance matrix.
-    return
-        distance matrix:
-            row of the matrix represents the data point,
-            column of the matrix represents the k-th cluster.
+
+    row of the matrix represents the data point,
+    column of the matrix represents the k-th cluster.
     """
     # ***************************************************
     # INSERT YOUR CODE HERE
     # TODO: build distance matrix
     # ***************************************************
-    distance_list = []
-    num_cluster, _ = mu.shape
-    for k_th in range(num_cluster):
-        sum_squares = np.sum(np.square(data - mu[k_th, :]), axis=1)
-        distance_list.append(sum_squares)
-    return np.array(distance_list).T
+    raise NotImplementedError
